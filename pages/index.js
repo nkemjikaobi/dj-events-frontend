@@ -13,7 +13,7 @@ export default function Home({ events }) {
 			))}
 			{events.length > 0 && (
 				<Link href="/events" className="btn-secondary">
-					View All Events
+					View All Events 
 				</Link>
 			)}
 		</Layout>
