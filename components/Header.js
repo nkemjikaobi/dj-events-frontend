@@ -7,6 +7,7 @@ const Header = () => {
 			<div className={styles.logo}>
 				<Link href='/'>
 					<a>DJ Events</a>
+					{/* The a tag is just for styling purposes */}
 				</Link>
 			</div>
 
