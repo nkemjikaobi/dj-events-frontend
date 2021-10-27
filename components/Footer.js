@@ -7,7 +7,7 @@ const Footer = () => {
 		<footer className={styles.footer}>
 			<p>Copywright &copy; DJ Events 2021</p>
 			<p>
-				<Link href='about'>About This Project</Link>
+				<Link href='/about'>About This Project</Link>
 			</p>
 		</footer>
 	);
