@@ -11,9 +11,7 @@ const Header = () => {
 					{/* The a tag is just for styling purposes */}
 				</Link>
 			</div>
-
 			<Search />
-
 			<nav>
 				<ul>
 					<li>
