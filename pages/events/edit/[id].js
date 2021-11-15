@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import Modal from '@/components/Modal';
+import ImageUpload from '@/components/ImageUpload';
 import { useRouter } from 'next/router';
 import { BASE_URL } from '@/config/index';
 import styles from '@/styles//Form.module.css';
@@ -65,6 +66,13 @@ const EditEventPage = ({ evt }) => {
 			const evt = await res.json();
 			router.push(`/events/${evt.slug}`);
 		}
+	};
+
+	const ImageUploaded = async () => {
+		const res = await fetch(`${BASE_URL}/events/${evt.id}`);
+		const data = await res.json();
+		setImagePreview(data.image.formats.thumbnail.url);
+		setShowModal(false);
 	};
 	return (
 		<Layout title='Add New Event'>
@@ -162,7 +170,7 @@ const EditEventPage = ({ evt }) => {
 				</button>
 			</div>
 			<Modal show={showModal} onClose={() => setShowModal(false)}>
-				IMAGE UPLOAD
+				<ImageUpload evtId={evt.id} ImageUploaded={ImageUploaded} />
 			</Modal>
 		</Layout>
 	);
