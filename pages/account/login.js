@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Layout from '@/components/Layout';
 import styles from '@/styles/AuthForm.module.css';
 import Link from 'next/link';
@@ -9,6 +9,8 @@ import AuthContext from '@/context/AuthContext';
 
 const LoginPage = () => {
 	const { login, error } = useContext(AuthContext);
+
+	useEffect(() => error && toast.error(error), []);
 
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
