@@ -10,7 +10,7 @@ import AuthContext from '@/context/AuthContext';
 const LoginPage = () => {
 	const { login, error } = useContext(AuthContext);
 
-	useEffect(() => error && toast.error(error), []);
+	useEffect(() => error && toast.error(error));
 
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
