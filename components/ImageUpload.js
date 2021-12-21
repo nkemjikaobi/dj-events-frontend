@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { BASE_URL } from '@/config/index';
 import styles from '@/styles/Form.module.css';
 
-export default function ImageUpload({ evtId, ImageUploaded }) {
+export default function ImageUpload({ evtId, ImageUploaded, token }) {
 	const [image, setImage] = useState(null);
 
 	const handleSubmit = async e => {
@@ -16,7 +16,7 @@ export default function ImageUpload({ evtId, ImageUploaded }) {
 		const res = await fetch(`${BASE_URL}/upload`, {
 			method: 'POST',
 			headers: {
-				//Authorization: `Bearer ${token}`,
+				Authorization: `Bearer ${token}`,
 			},
 			body: formData,
 		});
