@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+LIVE LINK => https://djeventsfrontend-derick.vercel.app/
+
 ## Getting Started
 
 First, run the development server:
